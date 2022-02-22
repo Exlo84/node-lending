@@ -6,7 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="https://ether1.org/images/icon.png" />
+	<link rel="icon" type="image/png"
+		href="https://raw.githubusercontent.com/Ether1Project/Ether-1-Branding/master/PNG%20Logos/ether1new-transparent.png" />
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 	<!--===============================================================================================-->
@@ -28,10 +29,12 @@
 
 	<div class="limiter">
 		<div class="container-table100">
-			<div class="wrap-table100" style="background: url('images/background.png') no-repeat fixed center; background-size: contain;">
+			<div class="wrap-table100"
+				style="background: url('images/background.png') no-repeat fixed center; background-size: contain;">
 				<div class="row header">
 					<div class="cell" style="width: 500px; height: 100px; background-color: #362f31;">
-						<img src="https://raw.githubusercontent.com/Ether1Project/Ether-1-Branding/master/PNG%20Logos/ethofsstakingdark.png"></img>
+						<img
+							src="https://raw.githubusercontent.com/Ether1Project/Ether-1-Branding/master/PNG%20Logos/ethofsstakingdark.png"></img>
 						<h3 style="padding: 15px;">Staking Market (Beta Testing)</h3>
 						<h4 style="font-size: 18px;"><span id="total-lending"></span></h4>
 						<h4 style="font-size: 18px;"><span id="total-available"></span></h4>
@@ -56,12 +59,17 @@
 					</div>
 					<div class="cell" style="padding-right: 10px; padding-left: 10px;">
 						<div class="dropdown">
-						<button type="button" class="btn btn-primary dropdown-toggle" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter Contracts</button>
-						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="padding-left: 20%;">
-							<button type="button" class="btn btn-success" id="filter-all-button" style="width: 80%;">All</button><br><br>
-							<button type="button" class="btn btn-success" id="filter-open-button" style="width: 80%;">Open</button><br><br>
-							<button type="button" class="btn btn-success" id="filter-closed-button" style="width: 80%;">Closed</button><br><br>
-						</div>
+							<button type="button" class="btn btn-primary dropdown-toggle" id="filter-dropdown"
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter
+								Contracts</button>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="padding-left: 20%;">
+								<button type="button" class="btn btn-success" id="filter-all-button"
+									style="width: 80%;">All</button><br><br>
+								<button type="button" class="btn btn-success" id="filter-open-button"
+									style="width: 80%;">Open</button><br><br>
+								<button type="button" class="btn btn-success" id="filter-closed-button"
+									style="width: 80%;">Closed</button><br><br>
+							</div>
 						</div>
 					</div>
 
@@ -98,7 +106,8 @@
 						Lender Contracts
 					</div>
 					<div class="cell" style="padding-right: 10px; padding-left: 10px;">
-						<button type="button" class="btn btn-primary" id="add-contract-button" style="display: none;" onclick="window.newLendingContractSetup();">Add Contract</button>
+						<button type="button" class="btn btn-primary" id="add-contract-button" style="display: none;"
+							onclick="window.newLendingContractSetup();">Add Contract</button>
 					</div>
 				</div>
 
@@ -180,8 +189,10 @@
 					<table class="table table-hover">
 						<tbody>
 							<div class="md-form mb-5">
-								<label data-error="wrong" data-success="right" for="purchase-private-key">Enter Private Key To Login:</label>
-								<input type="text" id="private-key" class="form-control validate" style="background-color: #e0dce0;" required>
+								<label data-error="wrong" data-success="right" for="purchase-private-key">Enter Private
+									Key To Login:</label>
+								<input type="text" id="private-key" class="form-control validate"
+									style="background-color: #e0dce0;" required>
 							</div>
 						</tbody>
 					</table>
@@ -189,8 +200,10 @@
 				</div>
 				<!--Footer-->
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal" style="border-color: #840032; background-color: #840032;">Close</button>
-					<button type="button" class="btn btn-primary" id="loginModalButton" style="border-color: #840032; background-color: #840032;">Login</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal"
+						style="border-color: #840032; background-color: #840032;">Close</button>
+					<button type="button" class="btn btn-primary" id="loginModalButton"
+						style="border-color: #840032; background-color: #840032;">Login</button>
 				</div>
 			</div>
 		</div>
@@ -198,7 +211,8 @@
 	<!-- Modal: modalLogin -->
 
 	<!-- Modal: modalDetails -->
-	<div class="modal fade" id="modalDetails" tabindex="-1" role="dialog" aria-labelledby="modalDetails" aria-hidden="true">
+	<div class="modal fade" id="modalDetails" tabindex="-1" role="dialog" aria-labelledby="modalDetails"
+		aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<!--Header-->
@@ -217,34 +231,43 @@
 								<label data-error="wrong" data-success="right" for="node-type">Node Type:</label>
 								<div style="background-color: #ffffff;"><span id="node-type"></span></div>
 								<hr>
-								<label data-error="wrong" data-success="right" for="contract-address">Contract Address:</label>
+								<label data-error="wrong" data-success="right" for="contract-address">Contract
+									Address:</label>
 								<div style="background-color: #ffffff;"><span id="contract-address"></span></div>
 								<hr>
-								<label data-error="wrong" data-success="right" for="borrower-address">Borrower Address:</label>
+								<label data-error="wrong" data-success="right" for="borrower-address">Borrower
+									Address:</label>
 								<div style="background-color: #ffffff;"><span id="borrower-address"></span></div>
 								<hr>
-								<label data-error="wrong" data-success="right" for="deploy-block">Deployment Block Height:</label>
+								<label data-error="wrong" data-success="right" for="deploy-block">Deployment Block
+									Height:</label>
 								<div style="background-color: #ffffff;"><span id="deploy-block"></span></div>
 								<hr>
-								<label data-error="wrong" data-success="right" for="blocks-since">Blocks Since Deployment:</label>
+								<label data-error="wrong" data-success="right" for="blocks-since">Blocks Since
+									Deployment:</label>
 								<div style="background-color: #ffffff;"><span id="blocks-since"></span></div>
 								<hr>
 								<label data-error="wrong" data-success="right" for="node-status">Node Status:</label>
 								<div style="background-color: #ffffff;"><span id="node-status"></span></div>
 								<hr>
-								<label data-error="wrong" data-success="right" for="original-origination-fee">Origination Fee:</label>
-								<div style="background-color: #ffffff;"><span id="original-origination-fee"></span></div>
+								<label data-error="wrong" data-success="right"
+									for="original-origination-fee">Origination Fee:</label>
+								<div style="background-color: #ffffff;"><span id="original-origination-fee"></span>
+								</div>
 								<hr>
-								<label data-error="wrong" data-success="right" for="last-lender-reward">Last Lender Reward Amount:</label>
+								<label data-error="wrong" data-success="right" for="last-lender-reward">Last Lender
+									Reward Amount:</label>
 								<div style="background-color: #ffffff;"><span id="last-lender-reward"></span></div>
 								<hr>
-								<label data-error="wrong" data-success="right" for="last-borrower-reward">Last Borrower Reward Amount:</label>
+								<label data-error="wrong" data-success="right" for="last-borrower-reward">Last Borrower
+									Reward Amount:</label>
 								<div style="background-color: #ffffff;"><span id="last-borrower-reward"></span></div>
 								<hr>
 								<!--<label data-error="wrong" data-success="right" for="reset-block">Lender Reset Eligibility Block Height:</label>
 								<div style="background-color: #ffffff;"><span id="reset-block"></span></div>
 								<hr>-->
-								<label data-error="wrong" data-success="right" for="contract-text">Additional Terms/Details:</label>
+								<label data-error="wrong" data-success="right" for="contract-text">Additional
+									Terms/Details:</label>
 								<div style="background-color: #ffffff;"><span id="contract-text"></span></div>
 							</div>
 						</tbody>
@@ -253,7 +276,8 @@
 				</div>
 				<!--Footer-->
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal" style="border-color: #840032; background-color: #840032;">Close</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal"
+						style="border-color: #840032; background-color: #840032;">Close</button>
 				</div>
 			</div>
 		</div>
@@ -261,7 +285,8 @@
 	<!-- Modal: modalDetails -->
 
 	<!-- Modal: modalMessage -->
-	<div class="modal fade" id="modalMessage" tabindex="-1" role="dialog" aria-labelledby="modalMessage" aria-hidden="true">
+	<div class="modal fade" id="modalMessage" tabindex="-1" role="dialog" aria-labelledby="modalMessage"
+		aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<!--Header-->
@@ -278,11 +303,13 @@
 						<tbody>
 							<div class="md-form mb-5">
 								<label data-error="wrong" data-success="right" for="new-message">Messages:</label>
-								<div id="message-data-table" style="background-color: #e0dce0; overflow-y:auto; height:200px;"></div>
+								<div id="message-data-table"
+									style="background-color: #e0dce0; overflow-y:auto; height:200px;"></div>
 							</div>
 							<div class="md-form mb-5">
 								<label data-error="wrong" data-success="right" for="new-message">Enter Message:</label>
-								<textarea name="new-message" id="new-message" rows="5" style="background-color: #ffffff; width:100%;"></textarea>
+								<textarea name="new-message" id="new-message" rows="5"
+									style="background-color: #ffffff; width:100%;"></textarea>
 							</div>
 						</tbody>
 					</table>
@@ -290,8 +317,10 @@
 				</div>
 				<!--Footer-->
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal" style="border-color: #840032; background-color: #840032;">Close</button>
-					<button type="button" class="btn btn-primary" id="sendMessageModalButton" style="border-color: #840032; background-color: #840032;">Send Message</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal"
+						style="border-color: #840032; background-color: #840032;">Close</button>
+					<button type="button" class="btn btn-primary" id="sendMessageModalButton"
+						style="border-color: #840032; background-color: #840032;">Send Message</button>
 				</div>
 			</div>
 		</div>
@@ -299,7 +328,8 @@
 	<!-- Modal: modalMessage -->
 
 	<!-- Modal: verifyNodeModal -->
-	<div class="modal fade" id="verifyNodeModal" tabindex="-1" role="dialog" aria-labelledby="verifyNodeModal" aria-hidden="true">
+	<div class="modal fade" id="verifyNodeModal" tabindex="-1" role="dialog" aria-labelledby="verifyNodeModal"
+		aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<!--Header-->
@@ -315,8 +345,10 @@
 					<table class="table table-hover">
 						<tbody>
 							<div class="md-form mb-5">
-								<label data-error="wrong" data-success="right" for="verify-node-address">Enter Node Verification Address (From Node Dashboard):</label>
-								<input type="text" id="verify-node-address" class="form-control validate" style="background-color: #e0dce0;" required>
+								<label data-error="wrong" data-success="right" for="verify-node-address">Enter Node
+									Verification Address (From Node Dashboard):</label>
+								<input type="text" id="verify-node-address" class="form-control validate"
+									style="background-color: #e0dce0;" required>
 							</div>
 						</tbody>
 					</table>
@@ -324,8 +356,10 @@
 				</div>
 				<!--Footer-->
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal" style="border-color: #840032; background-color: #840032;">Close</button>
-					<button type="button" class="btn btn-primary" id="verifyNodeConfirmButton" style="border-color: #840032; background-color: #840032;">Send TX</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal"
+						style="border-color: #840032; background-color: #840032;">Close</button>
+					<button type="button" class="btn btn-primary" id="verifyNodeConfirmButton"
+						style="border-color: #840032; background-color: #840032;">Send TX</button>
 				</div>
 			</div>
 		</div>
@@ -334,7 +368,8 @@
 
 
 	<!-- Modal: minedBlockTrackerModal -->
-	<div class="modal fade" id="minedBlockTrackerModal" tabindex="-1" role="dialog" aria-labelledby="minedBlockTrackerModal" aria-hidden="true">
+	<div class="modal fade" id="minedBlockTrackerModal" tabindex="-1" role="dialog"
+		aria-labelledby="minedBlockTrackerModal" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<!--Header-->
@@ -351,15 +386,18 @@
 						<tbody>
 							<div class="md-form mb-5">
 								<br>
-								<h4 class="modal-title" style="font-size: 20px;">Ether-1 Transaction Status: <span id="status" style="color: #9c2877; font-weight: bold;">In Progress</span></h4>
-								<h4 class="modal-title" style="font-size: 20px;">Waiting For Transaction Confirmation</h4>
+								<h4 class="modal-title" style="font-size: 20px;">Ether-1 Transaction Status: <span
+										id="status" style="color: #9c2877; font-weight: bold;">In Progress</span></h4>
+								<h4 class="modal-title" style="font-size: 20px;">Waiting For Transaction Confirmation
+								</h4>
 							</div>
 						</tbody>
 					</table>
 				</div>
 				<!--Footer-->
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal" style="border-color: #840032; background-color: #840032;">Close</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal"
+						style="border-color: #840032; background-color: #840032;">Close</button>
 				</div>
 			</div>
 		</div>
@@ -367,7 +405,8 @@
 	<!-- Modal: minedBlockTrackerModal -->
 
 	<!-- Modal: costConfirmationModal -->
-	<div class="modal fade" id="costConfirmationModal" tabindex="-1" role="dialog" aria-labelledby="costConfirmationModal" aria-hidden="true">
+	<div class="modal fade" id="costConfirmationModal" tabindex="-1" role="dialog"
+		aria-labelledby="costConfirmationModal" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<!--Header-->
@@ -384,7 +423,9 @@
 						<tbody>
 							<div class="md-form mb-5">
 								<br>
-								<h4 class="modal-title" style="font-size: 20px;">Transaction Cost: &nbsp<span id="confirm-cost" style="color: #9c2877; font-weight: bold;">0</span>&nbsp ETHO</h4>
+								<h4 class="modal-title" style="font-size: 20px;">Transaction Cost: &nbsp<span
+										id="confirm-cost" style="color: #9c2877; font-weight: bold;">0</span>&nbsp ETHO
+								</h4>
 								<h4 class="modal-title" style="font-size: 20px;">Do You Wish To Continue?</h4>
 							</div>
 						</tbody>
@@ -392,8 +433,10 @@
 				</div>
 				<!--Footer-->
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal" style="border-color: #840032; background-color: #840032;">Close</button>
-					<button type="button" class="btn btn-primary" id="confirmButton" style="border-color: #840032; background-color: #840032;">Continue</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal"
+						style="border-color: #840032; background-color: #840032;">Close</button>
+					<button type="button" class="btn btn-primary" id="confirmButton"
+						style="border-color: #840032; background-color: #840032;">Continue</button>
 				</div>
 			</div>
 		</div>
@@ -401,7 +444,8 @@
 	<!-- Modal: costConfirmationModal -->
 
 	<!-- Modal: confirmationModal -->
-	<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModal" aria-hidden="true">
+	<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModal"
+		aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<!--Header-->
@@ -418,7 +462,9 @@
 						<tbody>
 							<div class="md-form mb-5">
 								<br>
-								<h4 class="modal-title" style="font-size: 20px;">Action Confirmation: &nbsp<span id="confirm-message" style="color: #9c2877; font-weight: bold;">Abandon</span>&nbsp Contract</h4>
+								<h4 class="modal-title" style="font-size: 20px;">Action Confirmation: &nbsp<span
+										id="confirm-message"
+										style="color: #9c2877; font-weight: bold;">Abandon</span>&nbsp Contract</h4>
 								<h4 class="modal-title" style="font-size: 20px;">Do You Wish To Continue?</h4>
 							</div>
 						</tbody>
@@ -426,8 +472,10 @@
 				</div>
 				<!--Footer-->
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal" style="border-color: #840032; background-color: #840032;">Close</button>
-					<button type="button" class="btn btn-primary" id="generalConfirmButton" style="border-color: #840032; background-color: #840032;">Continue</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal"
+						style="border-color: #840032; background-color: #840032;">Close</button>
+					<button type="button" class="btn btn-primary" id="generalConfirmButton"
+						style="border-color: #840032; background-color: #840032;">Continue</button>
 				</div>
 			</div>
 		</div>
@@ -452,7 +500,8 @@
 						<tbody>
 							<div class="md-form mb-5">
 								<br>
-								<h4 class="modal-title" style="font-size: 20px;">Become an &nbsp<span id="etho-message" style="color: #9c2877; font-weight: bold;">ETHO</span>&nbsp Lender</h4>
+								<h4 class="modal-title" style="font-size: 20px;">Become an &nbsp<span id="etho-message"
+										style="color: #9c2877; font-weight: bold;">ETHO</span>&nbsp Lender</h4>
 								<ol>
 									<li><b>1.)</b> Login with your private key</li>
 									<li><b>2.)</b> Click “Add Contract”</li>
@@ -460,24 +509,34 @@
 								</ol>
 								<h5 class="modal-title" style="font-size: 18px;">Lender Contracts Buttons</h5>
 								<ul>
-									<li><b>• Reset</b> - put contract back on market and keep or return origination fee based on terms</li>
-									<li><b>• Remove</b> - delete contract from market and keep or return origination fee based on terms</li>
+									<li><b>• Reset</b> - put contract back on market and keep or return origination fee
+										based on terms</li>
+									<li><b>• Remove</b> - delete contract from market and keep or return origination fee
+										based on terms</li>
 									<li><b>• Message</b> - send message to borrower</li>
-									<li><i>(note: forfeited borrower fees do not get paid out until the contract is removed)</i></li>
+									<li><i>(note: forfeited borrower fees do not get paid out until the contract is
+											removed)</i></li>
 								</ul>
 								<hr>
-								<h4 class="modal-title" style="font-size: 20px;">Become an &nbsp<span id="etho-message" style="color: #9c2877; font-weight: bold;">ETHO</span>&nbsp Borrower</h4>
+								<h4 class="modal-title" style="font-size: 20px;">Become an &nbsp<span id="etho-message"
+										style="color: #9c2877; font-weight: bold;">ETHO</span>&nbsp Borrower</h4>
 								<ol>
 									<li><b>1.)</b> Login with your private key</li>
 									<li><b>2.)</b> Select desired available contract</li>
 									<li><b>3.)</b> Confirm fee payment and submit to reserve contract</li>
-									<li><b>4.)</b> Setup your node at <a href="https://nodes.ether1.org/">https://nodes.ether1.org</a></li>
-									<li><b>5.)</b> Use your staking dashboard to send node verification tx (click “Send TX” button) and enter verification address from node dashboard registration. Use resulting tx hash for verification</li>
+									<li><b>4.)</b> Setup your node at <a
+											href="https://nodes.ethoprotocol.com/">https://nodes.ethoprotocol.com</a>
+									</li>
+									<li><b>5.)</b> Use your staking dashboard to send node verification tx (click “Send
+										TX” button) and enter verification address from node dashboard registration. Use
+										resulting tx hash for verification</li>
 								</ol>
 								<h5 class="modal-title" style="font-size: 18px;">Borrower Contracts Buttons</h5>
 								<ul>
-									<li><b>• Abandon</b> - withdraw offer to host node and keep or return origination fee based on terms</li>
-									<li><b>• Verify Node</b> - use for node dashboard verification transaction & resultant hash</li>
+									<li><b>• Abandon</b> - withdraw offer to host node and keep or return origination
+										fee based on terms</li>
+									<li><b>• Verify Node</b> - use for node dashboard verification transaction &
+										resultant hash</li>
 									<li><b>• Message</b> - send message to lender</li>
 								</ul>
 							</div>
@@ -486,7 +545,8 @@
 				</div>
 				<!--Footer-->
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal" style="border-color: #840032; background-color: #840032;">Close</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal"
+						style="border-color: #840032; background-color: #840032;">Close</button>
 				</div>
 			</div>
 		</div>
@@ -499,7 +559,7 @@
 			<div class="modal-content">
 				<!--Header-->
 				<div class="modal-header">
-					<h4 class="modal-title" id="termsModalTitle">Ether-1 Staking/Lending Terms & Conditions</h4>
+					<h4 class="modal-title" id="termsModalTitle">Etho Protocol Staking/Lending Terms & Conditions</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
@@ -514,15 +574,33 @@
 								<h4 class="modal-title" style="font-size: 20px;">Terms & Conditions</h4>
 								<hr>
 								<ol>
-									<li><b>1.</b> Borrower and Lender both agree they understand and consent to the terms and conditions below upon entering their private keys on this website.</li>
-									<li><b>2.</b> After claiming an available staking contract, Borrower has 50,000 blocks to setup an active and paying Ether-1 node using Lender's smart contract stake. Failure to do so gives Lender the option to collect Borrower's origination fee.
+									<li><b>1.</b> Borrower and Lender both agree they understand and consent to the
+										terms and conditions below upon entering their private keys on this website.
 									</li>
-									<li><b>3.</b> When Borrower's Ether-1 node produces its first reward payment within 50,000 blocks, contract status is changed from inactive to active. The contract status is changed back to inactive if the Borrower's node loses its paying status for a single payment period. Lender has the option to reset/remove an inactive contract between 50,000 and 199,999 blocks and collect Borrower’s origination fee.</li>
-									<li><b>4.</b> Lender can reset/remove an active contract after 200,000 blocks with the origination fee returned to the Borrower. Borrower can abandon an active contract after 200,000 blocks with the origination fee returned to the Borrower.</li>
-									<li><b>5.</b> If Borrower abandons an active contract within the first 200,000 blocks, security deposit is forfeited to the Lender.</li>
-									<li><b>6.</b> Lender can cancel an active contract only after 200,000 blocks, with 95% of the origination fee returned to the Borrower.</li>
-									<li>&nbsp<b>-</b> Lender has the option to stipulate additional Terms and Conditions within each staking contract. By claiming the staking contract, Borrower agrees to Lender's additional Term and Conditions.</li>
-									<li>&nbsp<b>-</b> Lender's additional stipulated Terms and Conditions do not supersede Smart Contract rules (1) through (6) listed above.</li>
+									<li><b>2.</b> After claiming an available staking contract, Borrower has 50,000
+										blocks to setup an active and paying Ether-1 node using Lender's smart contract
+										stake. Failure to do so gives Lender the option to collect Borrower's
+										origination fee.
+									</li>
+									<li><b>3.</b> When Borrower's Ether-1 node produces its first reward payment within
+										50,000 blocks, contract status is changed from inactive to active. The contract
+										status is changed back to inactive if the Borrower's node loses its paying
+										status for a single payment period. Lender has the option to reset/remove an
+										inactive contract between 50,000 and 199,999 blocks and collect Borrower’s
+										origination fee.</li>
+									<li><b>4.</b> Lender can reset/remove an active contract after 200,000 blocks with
+										the origination fee returned to the Borrower. Borrower can abandon an active
+										contract after 200,000 blocks with the origination fee returned to the Borrower.
+									</li>
+									<li><b>5.</b> If Borrower abandons an active contract within the first 200,000
+										blocks, security deposit is forfeited to the Lender.</li>
+									<li><b>6.</b> Lender can cancel an active contract only after 200,000 blocks, with
+										95% of the origination fee returned to the Borrower.</li>
+									<li>&nbsp<b>-</b> Lender has the option to stipulate additional Terms and Conditions
+										within each staking contract. By claiming the staking contract, Borrower agrees
+										to Lender's additional Term and Conditions.</li>
+									<li>&nbsp<b>-</b> Lender's additional stipulated Terms and Conditions do not
+										supersede Smart Contract rules (1) through (6) listed above.</li>
 								</ol>
 							</div>
 						</tbody>
@@ -530,7 +608,8 @@
 				</div>
 				<!--Footer-->
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal" style="border-color: #840032; background-color: #840032;">Close</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal"
+						style="border-color: #840032; background-color: #840032;">Close</button>
 				</div>
 			</div>
 		</div>
@@ -538,7 +617,8 @@
 	<!-- Modal: termsModal -->
 
 	<!-- Modal: transactionHashModal -->
-	<div class="modal fade" id="transactionHashModal" tabindex="-1" role="dialog" aria-labelledby="transactionHashModal" aria-hidden="true">
+	<div class="modal fade" id="transactionHashModal" tabindex="-1" role="dialog" aria-labelledby="transactionHashModal"
+		aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<!--Header-->
@@ -555,15 +635,19 @@
 						<tbody>
 							<div class="md-form mb-5">
 								<br>
-								<h4 class="modal-title" style="font-size: 20px;">TX Hash: &nbsp<span id="verification-tx-hash" style="font-size: 12px; color: #9c2877; font-weight: bold;"></span></h4>
-								<h4 class="modal-title" style="font-size: 20px;">Copy This Hash For Node Dashboard Use</h4>
+								<h4 class="modal-title" style="font-size: 20px;">TX Hash: &nbsp<span
+										id="verification-tx-hash"
+										style="font-size: 12px; color: #9c2877; font-weight: bold;"></span></h4>
+								<h4 class="modal-title" style="font-size: 20px;">Copy This Hash For Node Dashboard Use
+								</h4>
 							</div>
 						</tbody>
 					</table>
 				</div>
 				<!--Footer-->
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal" style="border-color: #840032; background-color: #840032;">Close</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal"
+						style="border-color: #840032; background-color: #840032;">Close</button>
 				</div>
 			</div>
 		</div>
@@ -571,7 +655,8 @@
 	<!-- Modal: transactionHashModal -->
 
 	<!-- Modal: modalNewContractSetup -->
-	<div class="modal fade" id="modalNewContractSetup" tabindex="-1" role="dialog" aria-labelledby="modalNewContractSetup" aria-hidden="true">
+	<div class="modal fade" id="modalNewContractSetup" tabindex="-1" role="dialog"
+		aria-labelledby="modalNewContractSetup" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<!--Header-->
@@ -588,12 +673,14 @@
 						<tbody>
 							<div class="md-form mb-5">
 								<label data-error="wrong" data-success="right" for="node-type">Select NodeType</label>
-								<select class="selectpicker form-control" data-style="btn-primary" id="node-type-selection">
+								<select class="selectpicker form-control" data-style="btn-primary"
+									id="node-type-selection">
 									<option value="GN">Gateway Node</option>
 									<option value="MN">Masternode</option>
 									<option value="SN">Service Node</option>
 								</select>
-								<label data-error="wrong" data-success="right" for="node-type">Select Desired Origination Fee</label>
+								<label data-error="wrong" data-success="right" for="node-type">Select Desired
+									Origination Fee</label>
 								<select class="selectpicker form-control" data-style="btn-primary" id="fee-selection">
 									<option value="150">150 ETHO</option>
 									<option value="200">200 ETHO</option>
@@ -601,8 +688,10 @@
 									<option value="1000">1000 ETHO</option>
 									<option value="2000">2000 ETHO</option>
 								</select>
-								<label data-error="wrong" data-success="right" for="node-type">Select Desired Lender Split % (Amount Lender Receives)</label>
-								<select class="selectpicker form-control" data-style="btn-primary" id="split-value-selection">
+								<label data-error="wrong" data-success="right" for="node-type">Select Desired Lender
+									Split % (Amount Lender Receives)</label>
+								<select class="selectpicker form-control" data-style="btn-primary"
+									id="split-value-selection">
 									<option value="1">1%</option>
 									<option value="2">2%</option>
 									<option value="3">3%</option>
@@ -655,10 +744,14 @@
 									<option value="50">50%</option>
 								</select>
 								<hr><br>
-								<label data-error="wrong" data-success="right" for="new-message">Additional Terms/Information:</label>
-								<textarea name="additional-terms" id="additional-terms" rows="10" style="background-color: #ffffff; width:100%;"></textarea>
+								<label data-error="wrong" data-success="right" for="new-message">Additional
+									Terms/Information:</label>
+								<textarea name="additional-terms" id="additional-terms" rows="10"
+									style="background-color: #ffffff; width:100%;"></textarea>
 								<hr><br>
-								<h4 class="modal-title" style="font-size: 20px;">Required Collateral For Contract Deployment:<br><span id="required-collateral" style="color: #9c2877; font-weight: bold;">30000</span>&nbsp ETHO</h4>
+								<h4 class="modal-title" style="font-size: 20px;">Required Collateral For Contract
+									Deployment:<br><span id="required-collateral"
+										style="color: #9c2877; font-weight: bold;">30000</span>&nbsp ETHO</h4>
 							</div>
 						</tbody>
 					</table>
@@ -666,28 +759,33 @@
 				</div>
 				<!--Footer-->
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal" style="border-color: #840032; background-color: #840032;">Close</button>
-					<button type="button" class="btn btn-primary" id="submitNewContractButton" style="border-color: #840032; background-color: #840032;">Submit</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal"
+						style="border-color: #840032; background-color: #840032;">Close</button>
+					<button type="button" class="btn btn-primary" id="submitNewContractButton"
+						style="border-color: #840032; background-color: #840032;">Submit</button>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- Modal: modalNewContractSetup -->
 	<!-- Modal -->
-	<div class="modal fade" id="loadingDataModal" tabindex="-1" role="dialog" aria-labelledby="loadingDataModal" aria-hidden="true">
-  	<div class="modal-dialog">
-  	  <div class="modal-content">
-        	<div class="modal-header">
-       	 	  <h4 class="modal-title" id="loadingDataModalTitle"><i class="fa fa-clock-o"></i> Syncing Staking Contract Data</h4>
-      		</div>
-     	  <div class="modal-body center-block">
-        <div class="progress">
-        <div class="progress-bar bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-        </div>
-        </div>
-      	</div>
-    	</div><!-- /.modal-content -->
-  	</div><!-- /.modal-dialog -->
+	<div class="modal fade" id="loadingDataModal" tabindex="-1" role="dialog" aria-labelledby="loadingDataModal"
+		aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="loadingDataModalTitle"><i class="fa fa-clock-o"></i> Syncing Staking
+						Contract Data</h4>
+				</div>
+				<div class="modal-body center-block">
+					<div class="progress">
+						<div class="progress-bar bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+							aria-valuemax="100">
+						</div>
+					</div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
 
 	<!--===============================================================================================-->
