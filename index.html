@@ -1,101 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Ether-1 Staking Market/Node Lending Dashboard</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Ether1Project/Ether-1-Branding/master/PNG%20Logos/ether1new-transparent.png" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0/css/select2.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/perfect-scrollbar/1.5.3/css/perfect-scrollbar.min.css">
-  <link rel="stylesheet" href="css/util.css">
-  <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Lending</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  <div class="limiter">
-    <div class="container-table100">
-      <div class="wrap-table100" style="background: url('images/background.png') no-repeat fixed center; background-size: contain;">
-        <div class="row header">
-          <div class="cell" style="width: 500px; height: 100px; background-color: #362f31;">
-            <img src="https://raw.githubusercontent.com/Ether1Project/Ether-1-Branding/master/PNG%20Logos/ethofsstakingdark.png">
-            <h3 style="padding: 15px;">Staking Market (Beta Testing)</h3>
-            <h4 style="font-size: 18px;"><span id="total-lending"></span></h4>
-            <h4 style="font-size: 18px;"><span id="total-available"></span></h4>
-            <h4 style="font-size: 18px;"><span id="login-account"></span></h4>
-          </div>
-        </div><br>
-        <div class="cell" style="float: right; padding-right: 10px; padding-left: 10px;">
-          <button type="button" class="btn btn-primary" id="login-button">Login</button>
-        </div>
-        <div class="cell" style="float: right; padding-right: 10px; padding-left: 10px;">
-          <button type="button" class="btn btn-primary" id="terms-button">Terms</button>
-        </div>
-        <div class="cell" style="float: right; padding-right: 10px; padding-left: 10px;">
-          <button type="button" class="btn btn-primary" id="help-button">Help</button>
-        </div>
-        <div class="row header" id="available-header1">
-          <div class="cell">All Contracts</div>
-          <div class="cell" style="padding-right: 10px; padding-left: 10px;">
-            <div class="dropdown">
-              <button type="button" class="btn btn-primary dropdown-toggle" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter Contracts</button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="padding-left: 20%;">
-                <button type="button" class="btn btn-success" id="filter-all-button" style="width: 80%;">All</button><br><br>
-                <button type="button" class="btn btn-success" id="filter-open-button" style="width: 80%;">Open</button><br><br>
-                <button type="button" class="btn btn-success" id="filter-closed-button" style="width: 80%;">Closed</button><br><br>
-              </div>
+    <div class="limiter">
+        <div class="container-table100">
+            <div class="wrap-table100" style="background: url('images/background.png') no-repeat fixed center; background-size: contain;">
+                <div id="header-container"></div>
+                <br>
+                <div id="metamask-connection-container"></div>
+                <div id="available-contracts-container"></div>
+                <div id="lender-contracts-container"></div>
+                <div id="borrower-contracts-container"></div>
+                <div id="modals-container"></div>
+                <button id="help-button" class="btn btn-info" data-toggle="modal" data-target="#helpModal">Help</button>
+                <button id="terms-button" class="btn btn-info" data-toggle="modal" data-target="#termsModal">Terms</button>
             </div>
-          </div>
         </div>
-        <div class="table" id="available-data-table">
-          <div class="row header" id="available-header2">
-            <div class="cell" style="width: 20%;">Type</div>
-            <div class="cell" style="width: 10%;">Fee</div>
-            <div class="cell" style="width: 10%;">Lender %</div>
-            <div class="cell" style="width: 15%;">Availability</div>
-            <div class="cell">Lender Address</div>
-            <div class="cell" style="padding-right: 15px;"></div>
-          </div>
-        </div><br>
-        <div class="row header" id="lender-header1">
-          <div class="cell">Lender Contracts</div>
-          <div class="cell" style="padding-right: 10px; padding-left: 10px;">
-            <button type="button" class="btn btn-primary" id="add-contract-button" style="display: none;" onclick="newLendingContractSetup();">Add Contract</button>
-          </div>
-        </div>
-        <div class="table" id="lender-data-table">
-          <div class="row header" id="lender-header2">
-            <div class="cell" style="width: 20%;">Type</div>
-            <div class="cell" style="width: 15%;">Last Paid</div>
-            <div class="cell" style="width: 10%;">Lender %</div>
-            <div class="cell" style="width: 12%;">Availability</div>
-            <div class="cell">Borrower Address</div>
-            <div class="cell" style="width: 30%;"></div>
-          </div>
-        </div><br>
-        <div class="row header" id="borrower-header1">
-          <div class="cell">Borrower Contracts</div>
-        </div>
-        <div class="table" id="borrower-data-table">
-          <div class="row header" id="borrower-header2">
-            <div class="cell" style="width: 20%;">Type</div>
-            <div class="cell" style="width: 20%;">Last Paid</div>
-            <div class="cell" style="width: 15%;">Lender %</div>
-            <div class="cell">Contract Address</div>
-            <div class="cell" style="width: 30%;"></div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0/js/select2.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/perfect-scrollbar/1.5.3/perfect-scrollbar.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/web3@1.5.0/dist/web3.min.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/bundle.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="js/metamask.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#header-container').load('header.html', function(response, status, xhr) {
+                if (status == "error") {
+                    console.error("Error loading header: " + xhr.status + " " + xhr.statusText);
+                }
+            });
+            $('#metamask-connection-container').load('metamask-connection.html', function(response, status, xhr) {
+                if (status == "error") {
+                    console.error("Error loading MetaMask connection: " + xhr.status + " " + xhr.statusText);
+                }
+            });
+            $('#available-contracts-container').load('available-contracts.html', function(response, status, xhr) {
+                if (status == "error") {
+                    console.error("Error loading available contracts: " + xhr.status + " " + xhr.statusText);
+                }
+            });
+            $('#lender-contracts-container').load('lender-contracts.html', function(response, status, xhr) {
+                if (status == "error") {
+                    console.error("Error loading lender contracts: " + xhr.status + " " + xhr.statusText);
+                }
+            });
+            $('#borrower-contracts-container').load('borrower-contracts.html', function(response, status, xhr) {
+                if (status == "error") {
+                    console.error("Error loading borrower contracts: " + xhr.status + " " + xhr.statusText);
+                }
+            });
+            $('#modals-container').load('modals.html', function(response, status, xhr) {
+                if (status == "error") {
+                    console.error("Error loading modals: " + xhr.status + " " + xhr.statusText);
+                }
+            });
+
+            // Modal trigger functionalities
+            $('#help-button').on('click', function() {
+                console.log('Help modal triggered');
+            });
+
+            $('#terms-button').on('click', function() {
+                console.log('Terms modal triggered');
+            });
+        });
+    </script>
 </body>
+
 </html>

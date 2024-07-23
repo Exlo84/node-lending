@@ -1,10 +1,31 @@
 {
   "name": "node-lending",
   "version": "1.0.0",
-  "description": "A decentralized lending platform for Ether-1 nodes.",
+  "description": "Ether-1 Node Lending",
+  "main": "js/app.js",
   "dependencies": {
+    "bootstrap": "^5.3.3",
+    "browserify": "^16.5.0",
+    "ethers": "^6.13.1",
+    "jquery": "^3.7.1",
     "web3": "^1.10.4"
   },
-  "author": "Exlo84",
-  "license": "ISC"
+  "scripts": {
+    "start": "http-server . -o",
+    "build": "browserify js/main.js -o js/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ether1Project/node-lending.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ether1Project/node-lending/issues"
+  },
+  "homepage": "https://github.com/Ether1Project/node-lending#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
 }
